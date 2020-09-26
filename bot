@@ -1,0 +1,55 @@
+// Bot main
+
+
+//Require
+
+
+//Setup lib and keywords
+const cmdStrings = ['engine','snippet','api','docs','wiki','help','market',];
+//Lib -> {cmdKeystring:{subStringKeys:{seccondSubkeyString}}}
+// EX: !engine powerBank spawn  ... Returns: Link to cronJob async.
+const keywordLib = { 
+  engine:
+    {
+      powerBank:
+        {
+          default: 'https://github.com/screeps/engine/blob/master/src/game/structures.js#L575',
+          
+          structure: 'https://github.com/screeps/engine/blob/master/src/game/structures.js#L575',
+          
+          spawn: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
+          create: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
+          generate: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
+  ,
+  snippet:
+  
+  ,
+  api:
+  
+  ,
+  docs:
+  
+  ,
+  wiki:
+  
+  ,
+  help:
+  
+  ,
+  market:
+  
+  ,
+  
+  }
+ }
+ 
+ //Bot listens for !/? keywords 
+ 
+ 
+ //String processor
+ // Remove 2nd keyword 's' 'es' 'ing' and toLowerCase search terms.
+ 
+ 
+ 
+ 
+ //
