@@ -5,21 +5,19 @@
 
 
 //Setup lib and keywords
-const cmdStrings = ['engine','snippet','api','docs','wiki','help','market',];
+const cmdStrings = ['source','snippet','api','docs','wiki','help','market',];
 //Lib -> {cmdKeystring:{subStringKeys:{seccondSubkeyString}}}
 // EX: !engine powerBank spawn  ... Returns: Link to cronJob async.
 const keywordLib = { 
-  engine:
+  source:
     {
-      powerBank:
+      powerbank:
         {
           default: 'https://github.com/screeps/engine/blob/master/src/game/structures.js#L575',
-          
           structure: 'https://github.com/screeps/engine/blob/master/src/game/structures.js#L575',
-          
-          spawn: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
-          create: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
-          generate: 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
+          'spawn|create|generate': 'https://github.com/screeps/backend-local/blob/master/lib/cronjobs.js#L194',
+        }
+        
   ,
   snippet:
   
@@ -44,10 +42,11 @@ const keywordLib = {
  }
  
  //Bot listens for !/? keywords 
+ // Remove s/es/ing and switch cmd string and toLowerCase
+ // Under switch, grab each subsequent 'keyword' and loop for each keyword (remove s es ing toLowerCase) and add each link to an array that is found.
+ // If no keyword found, inject default, log keyword and request and subsequent response from user who 
  
- 
- //String processor
- // Remove 2nd keyword 's' 'es' 'ing' and toLowerCase search terms.
+
  
  
  
