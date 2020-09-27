@@ -1,0 +1,38 @@
+// Object response -> build from user message, preform get to return  
+class response {
+  // Create a response, add err if there's an issue 
+  constructor(rawInput){
+    let parsed = rawInput.split(' ');
+    if(parsed.length == 0){
+      this.err = 'err_badInput';
+      return;
+    }
+    this.command = parsed[0];
+    parsed.shift()
+    const keys = [];
+    parsed.forEach(function(word){keys.push(word)})
+    if(keys.length == 0){
+      this.err = 'err_notEnoughKeywords';
+      return;
+    }
+    this.keywords = keys;
+ }
+
+
+  get source(){
+    let keywords = keys;
+    if(keywords.length == 0){
+      this.err = 'err_notEnoughKeywords';
+      return null;
+    }
+      switch(keywords[0]){
+        case 'creep':
+          if(kewords.length <= 1){
+            return 'DEFAULT_CREEP_RESPONSE';
+          }
+          switch(keword
+          switch(
+        break;
+      break;
+  }
+    
